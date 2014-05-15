@@ -16,4 +16,4 @@ def plist_items(request,id):
 	else:
 		pass	
 
-	return render_to_response('single.html',locals(),context_instance=RequestContext(request))
+	return render_to_response('videos.html',locals(),context_instance=RequestContext(request))

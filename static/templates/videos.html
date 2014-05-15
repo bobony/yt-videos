@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+{% block content %}
+	<div class="row">
+		<div class='col-md-8'>
+{% for video in list_videos %}
+<span class="glyphicon glyphicon-play"><a href="http://www.youtube.com/watch?v={{video.id}}"> {{video.title}}</a></span>
+<p class="count"><span class='glyphicon glyphicon-time'> {{video.duration}}</span> Views:{{video.views}}<hr>
+  {%endfor%}
+</div>
+</div>
+{% endblock %}

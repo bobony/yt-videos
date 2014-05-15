@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="row">
+		
+		{% for list in play_lists %}
+		<div class='col-md-3' >
+			<span class=" glyphicon glyphicon-th-list"> <img src="{{list.thumb}}" width="120" height="90"/></span></br>
+			<a href="/videos/{{list.pid}}">{{list.title|truncatewords:5}}</a>
+			<p class='count'>{{list.count}} Videos</p><hr>
+		</div>
+		{%endfor%}
+
+</div>
+{% endblock %}
